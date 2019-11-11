@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Open Health</string>
+    <string name="맥박측정">맥박측정</string>
+    <string name="물마시기">물마시기</string>
+    <string name="운동">운동</string>
+    <string name="맥박측정_화면">맥박측정_화면</string>
+    <string name="맥박측정하기">맥박측정하기</string>
+    <string name="측정결과">측정결과</string>
+    <string name="걷기">걷기</string>
+</resources>

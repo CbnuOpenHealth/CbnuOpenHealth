@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_move1"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:text="@string/맥박측정"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_move2"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:text="@string/물마시기"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/btn_move3"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:text="@string/운동"
+        android:textSize="30sp" />
+</LinearLayout>
