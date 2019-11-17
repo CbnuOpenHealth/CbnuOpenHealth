@@ -1,4 +1,5 @@
 ## OpenHealth
+```java
 // MainActivity.java
 package com.example.myapplication;
 
@@ -110,3 +111,4 @@ public class MainActivity extends AppCompatActivity {
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+```
