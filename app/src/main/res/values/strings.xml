@@ -7,4 +7,7 @@
     <string name="맥박측정하기">맥박측정하기</string>
     <string name="측정결과">측정결과</string>
     <string name="걷기">걷기</string>
+    <string name="키">키</string>
+    <string name="체중">체중</string>
+    <string name="확인">확인</string>
 </resources>

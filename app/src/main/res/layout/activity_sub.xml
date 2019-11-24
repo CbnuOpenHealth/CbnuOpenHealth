@@ -8,19 +8,4 @@
     tools:context=".SubActivity">
 
 
-    <Button
-        android:id="@+id/btn_move1"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:text="@string/맥박측정하기"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/측정결과"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
-
 </LinearLayout>
