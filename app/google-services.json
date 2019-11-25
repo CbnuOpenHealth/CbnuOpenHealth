@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "374363302566",
+    "firebase_url": "https://cbnuopenhealth.firebaseio.com",
+    "project_id": "cbnuopenhealth",
+    "storage_bucket": "cbnuopenhealth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:374363302566:android:04769c0b6e6f9be27da267",
+        "android_client_info": {
+          "package_name": "com.example.openhealth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "374363302566-nad692rm4htp5dgep3rq54v0klcosvd8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.openhealth",
+            "certificate_hash": "a9147a7b84b12acc28c768c1e0f6b7725bb2a355"
+          }
+        },
+        {
+          "client_id": "374363302566-5jffs114vn323asl5rdbur8o9ufhva6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDamy3SQ6-gFX9GJsBQ4Bm1DbSxR4B2yzA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "374363302566-5jffs114vn323asl5rdbur8o9ufhva6k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
