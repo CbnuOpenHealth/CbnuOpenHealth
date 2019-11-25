@@ -31,7 +31,7 @@
         android:indeterminate="false"
         android:progress="0"
         android:max="30"
-        android:progressTint="colo/"
+        android:progressTint="@color/green"
         android:progressDrawable="@drawable/circular_progress_foreground" />
 
     <View
@@ -41,7 +41,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="87dp"
-        android:background="#8BC34A" />
+        android:background="@color/green" />
 
     <TextView
         android:id="@+id/textView2"
@@ -73,7 +73,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="401dp"
-        android:background="#8BC34A" />
+        android:background="@color/green" />
 
     <TextView
         android:id="@+id/textView3"
