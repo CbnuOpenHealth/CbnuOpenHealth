@@ -15,7 +15,6 @@
         <activity android:name=".WalkingActivity"></activity>
         <activity android:name=".InputWater" />
         <activity android:name=".CheckWater" />
-        <activity android:name=".SubActivityWalking" />
         <activity android:name=".SubActivityWater" />
         <activity android:name=".SubActivity" />
         <activity android:name=".MainActivity">
