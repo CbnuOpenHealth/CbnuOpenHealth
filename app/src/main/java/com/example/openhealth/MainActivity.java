@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         btn_move3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(MainActivity.this ,SubActivityWalking.class);
+                Intent intent =new Intent(MainActivity.this ,WalkingActivity.class);
                 startActivity(intent); //액티비티 이동.
                 finish();
             }
