@@ -3,5 +3,14 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+    <color name="green">#85d73d</color>
+    <color name="blue">#3d95c9</color>
+>>>>>>> ce986217de356adef8adf90af52c94a1d63cfaaa
+>>>>>>> 4fea7f6ba896c2388f693784cd404f71223a9381
 </resources>

@@ -83,7 +83,7 @@ public class WalkingActivity extends AppCompatActivity implements SensorEventLis
             }
         }
         else if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
-            stepCount.setText(String.valueOf(event.values[0]) + " / 10000");
+            stepCount.setText(String.valueOf((int)event.values[0]) + " / 10000");
             progressBar.setProgress((int)event.values[0]);
         }
     }
