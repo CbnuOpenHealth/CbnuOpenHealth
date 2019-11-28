@@ -9,18 +9,21 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.io.Serializable;
+import java.util.HashMap;
 
 public class InputWater extends AppCompatActivity {
 
+
+    DatabaseReference mDatabase;
     EditText editText1, editText2;
     //String sfName1="myFile1",sfName2="myFile2";  //값을 저장할 두개의 파일
-    Button saveBtn, nextBtn;
-    double n1, n2;
-    double result;
-    //TextView result;
-    // TextView Height;
-    // TextView Weight;
+
+    SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,25 +31,36 @@ public class InputWater extends AppCompatActivity {
         setContentView(R.layout.activity_input_water);
         setTitle("사용자 정보 입력");
 
-        editText1 = (EditText) findViewById(R.id.tallEdit);
-        editText2 = (EditText) findViewById(R.id.weightEdit);
+        Button saveBtn=(Button) findViewById(R.id.saveBtn);
+        final EditText tall = (EditText) findViewById(R.id.tallEdit);
+        final EditText weight= (EditText) findViewById(R.id.weightEdit);
         //result = (TextView) findViewById(R.id.text);
-        saveBtn = (Button) findViewById(R.id.saveBtn);
+
+
+
+        sharedPreferences = getSharedPreferences("water", MODE_PRIVATE);
+
         saveBtn.setOnClickListener(new View.OnClickListener() {
             // 확인 버튼 클릭 시 데이터 저장
             @Override
             public void onClick(View v) {
-                try{
-                    n1 = Double.parseDouble(editText1.getText().toString());
-                    n2 = Double.parseDouble(editText2.getText().toString());
-                    //result.setText(String.format("%4.2f", (double) (n2  * 30)));
-                    result=n2*33;
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "입력란을 채우세요", Toast.LENGTH_SHORT).show();
-                }
-                Intent intent=new Intent(getApplicationContext(),SubActivityWater.class);
-                intent.putExtra("water",result);
-                startActivity(intent); //바로 넘어가게 해도될 지 잘 모르겠음
+               String sheight = tall.getText().toString();
+               String sweight = weight.getText().toString();
+
+               SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("height", Integer.parseInt(sheight));
+                editor.putInt("weight", Integer.parseInt(sweight));
+                editor.commit();
+
+                Toast.makeText(InputWater.this, "저장 완료", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InputWater.this, SubActivityWater.class);
+                startActivity(intent);
             }
         });
 

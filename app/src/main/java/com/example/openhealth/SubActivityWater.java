@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 public class SubActivityWater extends AppCompatActivity {
 
+    SharedPreferences sf;
     Button checkWater;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,11 +19,14 @@ public class SubActivityWater extends AppCompatActivity {
         setContentView(R.layout.activity_sub_water);
 
         TextView tx1=(TextView)findViewById(R.id.setgoal_edt_goal);
+        sf=getSharedPreferences("water",MODE_PRIVATE);
 
-        Intent intent=getIntent(); //데이터 수신
+        int weight=sf.getInt("weight",0);
 
-       double water=intent.getExtras().getDouble("water");
-       tx1.setText(String.valueOf(water));
+        //Intent intent=getIntent(); //데이터 수신
+
+       //double water=intent.getExtras().getInt("water");
+       tx1.setText(String.valueOf(weight*30));
 
 
         checkWater=(Button) findViewById(R.id.setgoal_btn_setgoal);

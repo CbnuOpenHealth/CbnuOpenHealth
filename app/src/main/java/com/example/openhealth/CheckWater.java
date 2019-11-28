@@ -3,6 +3,7 @@ package com.example.openhealth;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 
 
 public class CheckWater extends AppCompatActivity {
-
+    SharedPreferences sf2;
     TextView tv = null;
     TextView pb;
     Button changeBtn1, changeBtn2, changeBtn3, changeBtn4, changeBtn5 = null;
@@ -23,6 +24,11 @@ public class CheckWater extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_water);
+
+        sf2=getSharedPreferences("water",MODE_PRIVATE);
+        int weight=sf2.getInt("weight",0);
+        TextView tx2=(TextView)findViewById(R.id.check_water);
+        tx2.setText(String.valueOf(weight*30));
 
         tv=findViewById(R.id.tv);
         changeBtn1=findViewById(R.id.button);
