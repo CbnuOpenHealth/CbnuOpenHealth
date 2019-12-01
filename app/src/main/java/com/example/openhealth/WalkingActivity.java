@@ -22,9 +22,14 @@ public class WalkingActivity extends AppCompatActivity implements SensorEventLis
     private  int mStepDetector;
     TextView stepDetect;
     TextView stepCount;
+    TextView distance;
+    TextView kcal;
+    TextView Today;
+    TextView dist_txt;
+    TextView kcal_txt;
     ProgressBar progressBar;
     TextView step;
-    int value = 0;
+    double value = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +61,11 @@ public class WalkingActivity extends AppCompatActivity implements SensorEventLis
         progressBar = (ProgressBar)findViewById(R.id.progressBar);
         progressBar.setMax(10000);
         step = (TextView)findViewById(R.id.stepCount);
+        distance = (TextView)findViewById(R.id.distance);
+        kcal = (TextView)findViewById(R.id.kcal);
+        Today = (TextView)findViewById(R.id.Today);
+
+
 
     }
 
@@ -84,6 +94,8 @@ public class WalkingActivity extends AppCompatActivity implements SensorEventLis
         }
         else if (event.sensor.getType() == Sensor.TYPE_STEP_COUNTER) {
             stepCount.setText(String.valueOf((int)event.values[0]) + " / 10000");
+            distance.setText(String.valueOf(event.values[0] * 0.76) + " M");
+            kcal.setText(String.valueOf(event.values[0] * 0.03) + " kcal");
             progressBar.setProgress((int)event.values[0]);
         }
     }
