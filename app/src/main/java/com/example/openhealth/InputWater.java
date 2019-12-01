@@ -28,7 +28,6 @@ public class InputWater extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_input_water);
         setTitle("사용자 정보 입력");
 
         Button saveBtn=(Button) findViewById(R.id.saveBtn);

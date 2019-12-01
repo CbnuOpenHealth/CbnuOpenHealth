@@ -1,94 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_set_goal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_weight="10"
     android:orientation="vertical">
 
-
-   <TextView
+   <LinearLayout
        android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_weight="1"
-       android:gravity="center"
-       android:text="목표 수분 섭취량"
-       android:textColor="#0a9184"
-       android:textSize="22sp"
-       android:textStyle="bold" />
-
-   <RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="2">
-
-
-   <EditText
-       android:id="@+id/setgoal_edt_goal"
-       android:layout_width="150dp"
-       android:layout_height="wrap_content"
-       android:layout_alignParentTop="true"
-       android:layout_alignParentEnd="true"
-       android:layout_marginTop="107dp"
-       android:layout_marginEnd="130dp"
-       android:ems="10"
-       android:gravity="center"
-       android:inputType="numberDecimal"
-       android:maxLength="4"
-       android:maxLines="1"
-       android:text="2000"
-       android:textColor="#0C0909"
-       android:textSize="22sp"
-       android:textStyle="bold" />
-
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_alignBottom="@+id/setgoal_edt_goal"
-       android:layout_marginLeft="10dp"
-       android:layout_toEndOf="@+id/setgoal_edt_goal"
-       android:fontFamily="sans-serif-thin"
-       android:gravity="center"
-       android:text="ml"
-       android:textColor="#3d95c9"
-       android:textSize="26sp"
-       android:textStyle="bold" />
-
-      <TextView
-          android:id="@+id/textView2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentTop="true"
-          android:layout_alignParentEnd="true"
-          android:layout_marginTop="122dp"
-          android:layout_marginEnd="69dp"
-          android:text="ml"
-          android:textSize="28sp" />
-
-   </RelativeLayout>
-
-   <RelativeLayout
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_weight="2">
-
-      <Button
-          android:id="@+id/setgoal_btn_setgoal"
-          android:layout_width="fill_parent"
-          android:layout_height="wrap_content"
-          android:layout_alignParentTop="true"
-          android:layout_centerHorizontal="true"
-          android:layout_marginLeft="64dp"
-          android:layout_marginTop="108dp"
-          android:layout_marginRight="64dp"
-          android:background="#3d95c9"
-          android:text="확인 완료"
-          android:textColor="#ffffff" />
-
-   </RelativeLayout>
-
-   <TextView
-       android:layout_width="fill_parent"
-       android:layout_height="64dp" />
-
-</LinearLayout>
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:background="#ffffff">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="225dp"
+          android:orientation="vertical">
+         <ImageView
+             android:layout_width="100dp"
+             android:layout_height="100dp"
+             android:layout_gravity="center"
+             android:layout_margin="15dp"
+             android:src="@drawable/waterdrink"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:text="목표 수분 섭취량"
+             android:textSize="22dp"
+             android:textStyle="bold"
+             android:layout_marginTop="20dp"/>
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/green">
+      </View>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="300dp"
+          android:orientation="vertical">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="200dp"
+             android:orientation="horizontal">
+         <EditText
+             android:id="@+id/setgoal_edt_goal"
+             android:layout_width="0dp"
+             android:layout_weight="1"
+             android:layout_height="wrap_content"
+             android:layout_margin="20dp"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:inputType="numberDecimal"
+             android:maxLength="4"
+             android:maxLines="1"
+             android:text="2000"
+             android:textColor="#0C0909"
+             android:textSize="22dp"
+             android:textStyle="bold"
+             android:layout_marginTop="20dp"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:fontFamily="sans-serif-thin"
+             android:text="ml"
+             android:textColor="#3d95c9"
+             android:textSize="26dp"
+             android:textStyle="bold"
+             android:layout_gravity="center"
+             android:layout_marginRight="30dp"/>
+         </LinearLayout>
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="2dp"
+          android:background="@color/green">
+      </View>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+         <Button
+             android:id="@+id/setgoal_btn_setgoal"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="15"
+             android:layout_marginTop="20dp"
+             android:layout_gravity="center"
+             android:background="#3d95c9"
+             android:text="확인 완료"
+             android:textColor="#ffffff" />
+      </LinearLayout>
+   </LinearLayout>
+</RelativeLayout>
