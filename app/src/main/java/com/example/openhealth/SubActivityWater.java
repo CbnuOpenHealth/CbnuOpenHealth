@@ -23,6 +23,7 @@ public class SubActivityWater extends AppCompatActivity {
 
         int weight=sf.getInt("weight",0);
 
+       
         //Intent intent=getIntent(); //데이터 수신
 
        //double water=intent.getExtras().getInt("water");

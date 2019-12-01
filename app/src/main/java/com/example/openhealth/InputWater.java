@@ -56,10 +56,11 @@ public class InputWater extends AppCompatActivity {
             }
         });
 
+
         findViewById(R.id.nextBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InputWater.this, SubActivityWater.class);
+                Intent intent = new Intent(InputWater.this, MainActivity.class);
                 startActivity(intent);
             }
         });

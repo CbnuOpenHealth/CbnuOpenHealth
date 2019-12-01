@@ -1,33 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <EditText
+        android:id="@+id/tallEdit"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="151dp"
+        android:hint="키를 입력해주세요."
+        android:inputType="number"
+        android:textSize="28sp" />
 
+    <EditText
+        android:id="@+id/weightEdit"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="210dp"
+        android:hint="몸무게를 입력해주세요."
+        android:inputType="number"
+        android:textSize="28sp" />
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
-        android:id="@+id/btn_move1"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:text="@string/맥박측정"
-        android:textSize="30sp" />
+        android:id="@+id/saveBtn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="316dp"
+        android:text="저장" />
 
     <Button
-        android:id="@+id/btn_move2"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:text="@string/물마시기"
-        android:textSize="30sp" />
+        android:id="@+id/nextBtn"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="319dp"
+        android:text="다음" />
 
-    <Button
-        android:id="@+id/btn_move3"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:text="@string/걷기"
-        android:textSize="30sp" />
-</LinearLayout>
+</RelativeLayout>
