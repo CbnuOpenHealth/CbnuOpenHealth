@@ -78,7 +78,7 @@
                     android:layout_height="200dp"
                     android:indeterminate="false"
                     android:progress="0"
-                    android:max="30"
+                    android:max="100"
                     android:progressTint="@color/green"
                     android:progressDrawable="@drawable/circular_progress_foreground" />
             </FrameLayout>
@@ -128,7 +128,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:background="@drawable/ic_glass0"
-                    android:text="125ML" />
+                    android:text="150ML" />
                 <Button
                     android:id="@+id/btn2"
                     android:layout_width="wrap_content"
@@ -141,7 +141,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:background="@drawable/ic_glass06"
-                    android:text="350ML" />
+                    android:text="375ML" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

@@ -26,7 +26,7 @@ public class CheckWater extends AppCompatActivity {
         setContentView(R.layout.activity_check_water);
 
         sf2=getSharedPreferences("water",MODE_PRIVATE);
-        int weight=sf2.getInt("weight",0);
+        final int weight=sf2.getInt("weight",0);
         TextView tx2=(TextView)findViewById(R.id.check_water);
         tx2.setText(String.valueOf(weight*30));
 
@@ -36,25 +36,28 @@ public class CheckWater extends AppCompatActivity {
         changeBtn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count=count+125;
+                count=count+150;
                 tv.setText(""+count);
                 bar=(ProgressBar)findViewById(R.id.progressBar);
                 pb=(TextView)findViewById(R.id.textView6);
+
                 int nowValue=bar.getProgress();
                 int maxValue=bar.getMax();
                 CharSequence str = "";
 
                 if(maxValue == nowValue) {
                     nowValue = 0;
-                } else {
+                }
+                else {
                     bar.setVisibility(View.VISIBLE);
-                    nowValue += 5;
+                    nowValue += 100/((weight*30)/150);
                 }
 
-                if(nowValue == 0){
+                if(nowValue >= bar.getMax()){
                     bar.setVisibility(View.GONE);
                     str = "임무완료!";
-                } else {
+                }
+                else {
                     str = "클릭을 계속해 주세요." + "[" + nowValue + "]";
                 }
 
@@ -73,19 +76,23 @@ public class CheckWater extends AppCompatActivity {
                 pb=(TextView)findViewById(R.id.textView6);
                 int nowValue=bar.getProgress();
                 int maxValue=bar.getMax();
+                //int maxValue=bar.getMax();
                 CharSequence str = "";
 
                 if(maxValue == nowValue) {
                     nowValue = 0;
-                } else {
+                }
+                else {
                     bar.setVisibility(View.VISIBLE);
-                    nowValue += 5;
+                    nowValue+=100/((weight*30)/250);
+                    //nowValue += 5;
                 }
 
-                if(nowValue == 0){
+                if(nowValue >= bar.getMax()){
                     bar.setVisibility(View.GONE);
                     str = "임무완료!";
-                } else {
+                }
+                else {
                     str = "클릭을 계속해 주세요." + "[" + nowValue + "]";
                 }
 
@@ -97,7 +104,7 @@ public class CheckWater extends AppCompatActivity {
         changeBtn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                count=count+350;
+                count=count+375;
                 tv.setText(""+count);
                 bar=(ProgressBar)findViewById(R.id.progressBar);
                 pb=(TextView)findViewById(R.id.textView6);
@@ -107,15 +114,17 @@ public class CheckWater extends AppCompatActivity {
 
                 if(maxValue == nowValue) {
                     nowValue = 0;
-                } else {
+                }
+                else {
                     bar.setVisibility(View.VISIBLE);
-                    nowValue += 5;
+                    nowValue += 100/((weight*30)/375);
                 }
 
-                if(nowValue == 0){
+                if(nowValue >= bar.getMax()){
                     bar.setVisibility(View.GONE);
                     str = "임무완료!";
-                } else {
+                }
+                else {
                     str = "클릭을 계속해 주세요." + "[" + nowValue + "]";
                 }
 
@@ -139,13 +148,14 @@ public class CheckWater extends AppCompatActivity {
                     nowValue = 0;
                 } else {
                     bar.setVisibility(View.VISIBLE);
-                    nowValue += 5;
+                    nowValue += 100/((weight*30)/500);
                 }
 
-                if(nowValue == 0){
+                if(nowValue >= bar.getMax()){
                     bar.setVisibility(View.GONE);
                     str = "임무완료!";
-                } else {
+                }
+                else {
                     str = "클릭을 계속해 주세요." + "[" + nowValue + "]";
                 }
 
@@ -167,15 +177,17 @@ public class CheckWater extends AppCompatActivity {
 
                 if(maxValue == nowValue) {
                     nowValue = 0;
-                } else {
+                }
+                else {
                     bar.setVisibility(View.VISIBLE);
-                    nowValue += 5;
+                    nowValue += 100/((weight*30)/750);
                 }
 
-                if(nowValue == 0){
+                if(nowValue >= bar.getMax()){
                     bar.setVisibility(View.GONE);
                     str = "임무완료!";
-                } else {
+                }
+                else {
                     str = "클릭을 계속해 주세요." + "[" + nowValue + "]";
                 }
 
