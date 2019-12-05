@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -20,7 +21,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class SubActivity extends AppCompatActivity {
+
 
     private TextView mTextViewPulse;
     private RequestQueue mQueue;
@@ -37,6 +40,8 @@ public class SubActivity extends AppCompatActivity {
         pulseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mTextViewPulse.setText("");
+                mTextViewPulse.append(String.valueOf("측정중"));
                 String url = "http://192.168.0.6/get.php";
                 JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                         new Response.Listener<JSONObject>() {
@@ -46,8 +51,14 @@ public class SubActivity extends AppCompatActivity {
                                     JSONArray jsonArray = response.getJSONArray("pulse");
                                     for (int i = 0; i < jsonArray.length(); i++){
                                         JSONObject object = jsonArray.getJSONObject(i);
-                                        int datas = object.getInt("datas");
+                                        final int datas = object.getInt("datas");
+                                        new Handler().postDelayed(new Runnable() {
+                                            @Override
+                                            public void run() {
+                                        mTextViewPulse.setText("");
                                         mTextViewPulse.append(String.valueOf(datas));
+                                            }
+                                        },15000);
                                     }
                                 } catch (JSONException e) {
                                     e.printStackTrace();
@@ -61,7 +72,6 @@ public class SubActivity extends AppCompatActivity {
                     }
                 });
                 mQueue.add(request);
-
             }
         });
 
